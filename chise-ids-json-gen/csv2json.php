@@ -49,8 +49,8 @@ for ($i = 0; $i < $count; $i++) {
 for ($j = 0; $j < $count; $j++) {
     $d            = @array_combine($keys, $data[$j]);
     $newArray[$j] = $d;
-    
-    $newnewArray[$newArray[$j]["Entry"]]=$newArray[$j]["IDS"];
+
+    $newnewArray[$newArray[$j]["Entry"]]=$newArray[$j]["IDS"];//EntryとIDSだけを読み込み
 }
 
 
