@@ -14,27 +14,26 @@ filenames=(
     "IDS-UCS-Ext-E.txt"
 )
 
-
+echo "ダンロードを開始します..."
 for filename in ${filenames[@]};do
-curl  "http://git.chise.org/gitweb/?p=chise/ids.git;a=blob_plain;f=${filename};hb=HEAD" > ${filename}
+curl -s "http://git.chise.org/gitweb/?p=chise/ids.git;a=blob_plain;f=${filename};hb=HEAD" > ${filename}
 sed -e '1d' ./${filename} > ./${filename}.txt #最初の一行を削除
 rm ./${filename}
 mv ./${filename}.txt ./${filename}
 done
-
+echo "処理中..."
 cat ${filenames[@]} > IDS.txt
 
 rm ${filenames[@]}
 
-#for sed with Mac 改行しなきゃ（汗　http://unix.stackexchange.com/questions/52131/sed-on-osx-insert-at-a-certain-line
+#for sed with Mac バックスラッシュのうしろに改行しなきゃ（汗　
+#http://unix.stackexchange.com/questions/52131/sed-on-osx-insert-at-a-certain-line
 sed -e '1i\
 Unicode	Entry	IDS' ./IDS.txt > ./IDS_done.txt
 
 #重複行を削除する　http://qiita.com/arcizan/items/9cf19cd982fa65f87546
-# awk '!a[$0]++' ./IDS_done.txt
-
-
 awk '!x[$0]++' IDS_done.txt > Chise-IDS.txt
 
-
 rm ./IDS.txt ./IDS_done.txt
+
+echo "完成しました。Chise-IDS.txtファイルを確認ください"

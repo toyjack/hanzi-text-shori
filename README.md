@@ -24,13 +24,23 @@ php num_gen1.php data.txt
 ```
 php num_gen2.php data.txt
 ```
+###chise-ids-json-gen
+####idsdownloader
+[chise-ids](http://git.chise.org/gitweb/?p=chise/ids.git;a=tree)の以下のファイルダウンロードして整形できます。
+* IDS-UCS-Basic.txt
+* IDS-UCS-Ext-A.txt
+* IDS-UCS-Ext-B-1.txt
+* IDS-UCS-Ext-B-2.txt
+* IDS-UCS-Ext-B-3.txt
+* IDS-UCS-Ext-B-4.txt
+* IDS-UCS-Ext-B-5.txt
+* IDS-UCS-Ext-B-6.txt
+* IDS-UCS-Ext-C.txt
+* IDS-UCS-Ext-D.txt
+* IDS-UCS-Ext-E.txt
 
-#License
-The MIT License (MIT)
-Copyright (c) [2016]  [toyjack]
+####csv2json.php
+[g0v/z0y](https://github.com/g0v/z0y)の[idsdata](https://github.com/g0v/z0y/tree/master/node_modules/idsdata)モジュール用の`rawdata.js`ファイルを作成します。
+## License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+The hanzi-text-shori is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
