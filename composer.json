@@ -1,0 +1,14 @@
+{
+    "name": "toyjack/hanzi-textext-shori",
+    "description": "php",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Guanwei Liu",
+            "email": "toyjack@gmail.com"
+        }
+    ],
+    "require": {
+    }
+}
