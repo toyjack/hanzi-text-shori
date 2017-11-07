@@ -1,5 +1,4 @@
 <?php
-// 各行がカタカナがあるかどうかを判断する
 
 function read_File($file_name)
 {
@@ -31,17 +30,26 @@ mb_regex_encoding('UTF-8');
 mb_internal_encoding('UTF-8');
 
 // start here
+$data=array();
+$list=read_File('./list.txt');
+foreach ($list as $l) {
+	$data[$l]="";
+}
+
+
 if (!$argv[1]) die("need a file\n");
 $file = read_File($argv[1]); //read file
 
-//行を読んで
 foreach ($file as $line) {
-    // 行はカタカナ有無かを判断
-    if (preg_match('/\p{Katakana}/u', $line)) {
-        $output[]= $line."\t◯訓あり\n";
-    }else{
-        $output[]= $line."\t×訓なし\n";
-    }
+	if (preg_match('/^.+\t.+\t/u', $line)) {
+		$a=mb_split('\t', $line);
+		$data[$a[0]].=$a[1];
+		}
+		//for kanji
+
 }
-// done
-write_File('kun.txt',$output);
+
+
+foreach ($data as $key => $value) {
+	print($key."\t".$value."\n");
+}
